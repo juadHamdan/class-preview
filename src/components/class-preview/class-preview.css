@@ -1,13 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
 .class-preview-container{
+    background-color: white;
     position: relavite;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     height: 100%;
+    padding: 80px 30px 30px 30px;
+    font-family: "Rubik", sans-serif;
+}
+
+hr{
+    color: black;
+    background-color: black;
 }
 
 .class-operations-buttons{
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: lightpink;
+    border-radius: 50%;
+}
+.header-icon{
+    color: white;
+    font-size: 2.5rem;
+}
+
+
+.class-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+.class-info .small{
+    color: grey;
+    font-weight: regular;
+}
+
+
+
+
+
+.remark{
+    text-align: left;
+}
+
+
+
+
+.add-participants{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+select{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 3px;
+    border: none;
+}
+select:hover{
+    cursor: pointer;
+}
+select:focus{
+    outline: none;
+}
+
+select option{
+    padding: 10px;
+    margin: 5px;
 }

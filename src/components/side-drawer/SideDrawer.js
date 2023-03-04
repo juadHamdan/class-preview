@@ -12,9 +12,14 @@ const SideDrawer = ({
 }) => {
 
     function handleOutsideClick(e) {
+        if(e.target.className.includes("side-drawer-bg")){
+            onClose()
+        }
+        /*
         if (e.target.className !== "side-drawer") {
             onClose();
         }
+        */
     }
 
     const sideDrawerStyle = {
