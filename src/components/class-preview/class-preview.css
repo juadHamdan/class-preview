@@ -1,0 +1,13 @@
+
+.class-preview-container{
+    position: relavite;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.class-operations-buttons{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
