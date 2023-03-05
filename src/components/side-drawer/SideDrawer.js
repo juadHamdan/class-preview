@@ -6,7 +6,7 @@ const SideDrawer = ({
     children,
     show,
     onClose,
-    rtl = true,
+    rtl = false,
     transition = "slide",
     transitionTime = 300
 }) => {
@@ -15,15 +15,11 @@ const SideDrawer = ({
         if(e.target.className.includes("side-drawer-bg")){
             onClose()
         }
-        /*
-        if (e.target.className !== "side-drawer") {
-            onClose();
-        }
-        */
     }
 
     const sideDrawerStyle = {
-        right: rtl ? '0' : ''
+        right: rtl ? '' : '0',
+        left: rtl ? '0' :  ''
     };
 
     return (

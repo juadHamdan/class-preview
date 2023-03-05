@@ -15,10 +15,6 @@ const ClassPreview = ({
     handleToggleAddParticipant
 }) => {
 
-    function getAddedParticipants(){
-        return participants.filter(participant => participant.isAdded == true)
-    }
-
     return (
         <div className="class-preview-container">
 
@@ -31,18 +27,18 @@ const ClassPreview = ({
             <hr/>
 
             <div className="class-info">
-                <div className="coach-container">
-                    <i class="coach-icon fa fa-person-chalkboard"></i>
+                <div className="class-info-item">
+                    <i class="fa fa-person-chalkboard"></i>
                     <p>{coach.firstName} {coach.lastName.charAt(0)}</p>
                     <small>Coach</small>
                 </div>
-                <div className="time-container">
+                <div className="class-info-item">
                     <i class="time-icon fa fa-clock"></i>
                     <p>{startTime}</p>
                     <small>Start Time</small>
                 </div>
-                <div className="participants-container">
-                    <i class="fa fa-warehouse-full"></i>
+                <div className="class-info-item">
+                    <i class="fa fa-battery-half"></i>
                     <p>{numOfActiveParticipants}/{numOfTotalParticipants}</p>
                     <small>Participants</small>
                 </div>

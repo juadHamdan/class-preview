@@ -5,14 +5,16 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .side-drawer {
     position: fixed;
     text-align: center;
-    height: 100vw;
+    height: 100%;
     width: max(25vw, 430px);
     cursor: default;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
@@ -23,19 +25,11 @@
     height: 100%;
 }
 
-@media (max-width: 400px) {
-    .side-drawer {
-        width: 80vw;
-        height: 100vh;
+@media (max-width: 600px){
+    .side-drawer{
+        width: 85%;
     }
 }
-
-@media (min-width: 400px) and (max-width: 950px) {
-    .side-drawer {
-        height: 100vh;
-    }
-}
-
 
 /* ----------------------- */
 

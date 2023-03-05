@@ -11,20 +11,29 @@ const Particpants = ({
 }) => {
     const [showDropdownItems, setShowDropdownItems] = useState(false)
 
+    function getAddedParticipants(){
+        return participants.filter(participant => participant.isAdded == true)
+    }
+    function getNonAddedParticipants(){
+        return participants.filter(participant => participant.isAdded == false)
+    }
+
     return (
         <div className="participants-container">
             <div className="add-participants">
                 <strong>Participants</strong>
 
                 <div className="dropdown-container">
-                    <div className="dropdown-menu" onClick={() => setShowDropdownItems(showDropdownItems => !showDropdownItems)}>
-                        <p>Add Client</p>
+                    <div 
+                        className={`dropdown-menu ${showDropdownItems ? "dropdown-menu-opened" : ""}`} 
+                        onClick={() => setShowDropdownItems(showDropdownItems => !showDropdownItems)}>
+                        <p>{showDropdownItems ? "To" : "Add Client"}</p>
                         <i class="fa-solid fa-plus"></i>
                     </div>
 
                     {showDropdownItems ? 
                     <div className="dropdown-items">
-                        {participants.filter(participant => participant.isAdded == false).map(participant =>
+                        {getNonAddedParticipants().map(participant =>
                             <div className="dropdown-item" onClick={() => handleToggleAddParticipant(participant.id)} key={participant.id}>
                                 <img className="profile-picture" src={participant.imageUrl} alt="Profile Picture" />
                                 <p>{participant.firstName} {participant.lastName} </p>
@@ -37,7 +46,7 @@ const Particpants = ({
             </div>
 
             <div class="participants">
-                {participants.filter(participant => participant.isAdded == true).map(participant =>
+                {getAddedParticipants().map(participant =>
                     <div key={participant.id}>
                         <Participant
                             participant={participant}
@@ -60,19 +69,3 @@ Particpants.propTypes = {
 };
 
 export default Particpants;
-
-/*
-
-
-                <select name="Add Client" onClick={e => handleToggleAddParticipant(e.target.value)}>
-                    {participants.filter(participant => participant.isAdded == false).map(participant =>
-                        <option value={participant.id} key={participant.id}>
-                            <div className="participant-info">
-                                <img className="profile-picture" src={participant.imageUrl} alt="Profile Picture" />
-                                <p>{participant.firstName} {participant.lastName} </p>
-                            </div>
-                        </option>
-                    )}
-                </select>
-                
-                */

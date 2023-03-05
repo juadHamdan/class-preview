@@ -15,6 +15,7 @@
     align-items: center;
     flex-direction: row;
     gap: 15px;
+    font-weight: bold;
 }
 
 .participant .buttons{
@@ -22,7 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .participant .profile-picture{
@@ -67,4 +67,18 @@
     padding: 7.5px;
     font-size: 1.15rem;
     color: #f44336;
+}
+
+
+@media (max-width: 500px){
+    .participant .info{
+        gap: 5px;
+    }
+
+    .participant .contact-btn{
+        padding: 3px;
+    }
+    .participant .delete-btn{
+        padding: 3px;
+    }
 }
