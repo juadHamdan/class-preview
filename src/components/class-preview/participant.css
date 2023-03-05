@@ -17,6 +17,14 @@
     gap: 15px;
 }
 
+.participant .buttons{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
 .participant .profile-picture{
     width: 30px;
     height: 30px;
@@ -41,14 +49,12 @@
 .participant .btn-checked{
     color: var(--btn-theme-color);
     border: 1px solid var(--btn-theme-color);
-    margin-right: 30px;
 }
 
 .participant .btn-unchecked{
     color: white;
     background-color: var(--btn-theme-color);
     border: 1px solid var(--btn-theme-color);
-    margin-right: 30px;
 }
 
 

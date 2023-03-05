@@ -1,0 +1,66 @@
+.participants-container{
+    margin-top: 0;
+}
+
+.add-participants{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 20px 0;
+}
+
+.participants-container .dropdown-container{
+}
+
+.participants-container .dropdown-menu{
+    font-size: 0.9rem;
+    height: 30px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+.participants-container .dropdown-menu:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.participants-container .dropdown-menu:focus{
+    border: 1px solid green;
+}
+
+.participants-container .dropdown-items{
+    width: 180px;
+    margin-top: 5px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.participants-container .dropdown-item{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0 10px;
+    background-color: white;
+    font-size: 0.9rem;
+}
+
+.participants-container .dropdown-item:hover{
+    cursor: pointer;
+    background-color: #e3f2fd;
+}
+
+.participants-container .profile-picture{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}

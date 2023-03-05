@@ -1,8 +1,6 @@
 import "./class-preview.css";
 import PropTypes from "prop-types";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
-import Participant from "./Participant";
+import Participants from "./Participants";
 
 const ClassPreview = ({
     title,
@@ -28,20 +26,23 @@ const ClassPreview = ({
                 <div className="header-icon-container">
                     <i class="header-icon fa fa-dumbbell"></i>
                 </div>
-                <h2>{title}</h2>
+                <h3 className="header-text">{title}</h3>
             </div>
             <hr/>
 
             <div className="class-info">
                 <div className="coach-container">
+                    <i class="coach-icon fa fa-person-chalkboard"></i>
                     <p>{coach.firstName} {coach.lastName.charAt(0)}</p>
                     <small>Coach</small>
                 </div>
                 <div className="time-container">
+                    <i class="time-icon fa fa-clock"></i>
                     <p>{startTime}</p>
                     <small>Start Time</small>
                 </div>
                 <div className="participants-container">
+                    <i class="fa fa-warehouse-full"></i>
                     <p>{numOfActiveParticipants}/{numOfTotalParticipants}</p>
                     <small>Participants</small>
                 </div>
@@ -51,47 +52,30 @@ const ClassPreview = ({
             {remark ? 
                 <>
                     <div className="remark">
-                        <p>You Should Know...</p>
-                        <small>{remark}</small>
+                        <p className="remark-header">You Should Know...</p>
+                        <p class="remark-text">{remark}</p>
                     </div>
                     <hr/>
                 </>
                 : null
             }
 
-            <div className="participants">
-                <div className="add-participants">
-                    <strong>Participants</strong>
-
-                    <select name="Add Client" onClick={e => handleToggleAddParticipant(e.target.value)}>
-                        {participants.filter(participant => participant.isAdded == false).map(participant => 
-                            <option value={participant.id}  key={participant.id}>
-                                <div className="participant-info">
-                                    <img className="profile-picture" src={participant.imageUrl} alt="Profile Picture"/>
-                                    <p>{participant.firstName} {participant.lastName} </p>
-                                </div>
-                            </option>
-                        )}
-                    </select>
-                </div>
-
-                {participants.filter(participant => participant.isAdded == true).map(participant => 
-                    <div key={participant.id}>
-                        <Participant 
-                            participant={participant}
-                            onCheck={() => handleToggleParticipantCheck(participant.id)}
-                            onDelete={() => handleToggleAddParticipant(participant.id)}
-                            onContact={() => handleParticipantContact(participant.id)}
-                        />
-                    </div>
-                )}
-            </div>
-
-
+            <Participants
+                participants={participants}
+                handleToggleAddParticipant={handleToggleAddParticipant}
+                handleToggleParticipantCheck={handleToggleParticipantCheck}
+                handleParticipantContact={handleParticipantContact}
+            />
 
             <div className="class-operations-buttons">
-                <button className="btn edit-btn">Edit</button>
-                <button className="btn cancel-class-btn">Cancel Class</button>
+                <button className="btn edit-btn">
+                    <i class="edit-icon fa-solid fa-pen"></i>
+                    <p>Edit</p>
+                </button>
+                <button className="btn cancel-class-btn">
+                    <i class="cancel-class-icon fa-solid fa-calendar-xmark"></i>
+                    <p>Cancel Class</p>
+                </button>
             </div>
         </div>
     );

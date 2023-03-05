@@ -5,20 +5,27 @@
     position: relavite;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     height: 100%;
     padding: 80px 30px 30px 30px;
     font-family: "Rubik", sans-serif;
 }
 
 hr{
+    width: 600px;
+    margin-left: -30px;
+    color: #f5f5f5;
     color: black;
-    background-color: black;
+    height: 2px;
+    border: none;
+    background-color: #f5f5f5;
 }
+
 
 .class-operations-buttons{
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 5px;
+    left: 5px;
 }
 
 
@@ -35,12 +42,15 @@ hr{
     justify-content: center;
     width: 80px;
     height: 80px;
-    background-color: lightpink;
+    background-color: #ce93d8;
     border-radius: 50%;
 }
 .header-icon{
     color: white;
     font-size: 2.5rem;
+}
+.header-text{
+    margin-top: 7.5px;
 }
 
 
@@ -48,46 +58,67 @@ hr{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 10px 0;
+}
+.class-info p{
     font-weight: bold;
+    margin-bottom: 2px;
 }
-
-.class-info .small{
+.class-info small{
     color: grey;
-    font-weight: regular;
 }
-
-
-
-
+.class-info .fa{
+    font-size: 1.5rem;
+}
 
 .remark{
     text-align: left;
 }
+.remark-header{
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+.remark-text{
+    padding-top: 0;
+    font-size: 0.8rem;
+}
 
 
-
-
-.add-participants{
+.class-operations-buttons{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px 0;
+    gap: 0;
 }
-
-select{
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.03);
-    border-radius: 3px;
-    border: none;
-}
-select:hover{
-    cursor: pointer;
-}
-select:focus{
-    outline: none;
-}
-
-select option{
+.class-operations-buttons .btn{
+    height: 40px;
+    background-color: transparent;
     padding: 10px;
     margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.class-operations-buttons .btn:hover{
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+.class-operations-buttons .cancel-class-btn{
+    color: #f44336;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.class-operations-buttons .edit-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-icon{
+    font-size: 1.2rem;
+}
+
+.cancel-class-icon{
+    font-size: 1.2rem;
+    color: #f44336;
 }

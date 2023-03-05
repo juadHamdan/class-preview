@@ -15,7 +15,7 @@ const Participant = ({
                 <p>{participant.firstName} {participant.lastName} </p>
             </div>
 
-            <div>
+            <div class="buttons">
                 <button 
                     className={`btn ${participant.isChecked ? 'btn-checked' : 'btn-unchecked'}`}
                     onClick={onCheck}
@@ -23,18 +23,20 @@ const Participant = ({
                     {participant.isChecked ? "Checked" : "Check In"}
                 </button>
 
-                <button 
-                    className="btn contact-btn"
-                    onClick={onContact}
-                >
-                    <i class="fa-brands fa-whatsapp"></i>
-                </button>
-                <button 
-                    className="btn delete-btn"
-                    onClick={onDelete}
-                >
-                    <i class="fa fa-trash"></i>
-                </button>
+                <div>
+                    <button 
+                        className="btn contact-btn"
+                        onClick={onContact}
+                    >
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </button>
+                    <button 
+                        className="btn delete-btn"
+                        onClick={onDelete}
+                    >
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </div>
             </div>
 
             
