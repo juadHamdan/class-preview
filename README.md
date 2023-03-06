@@ -2,7 +2,7 @@
 
 ✦ SideDrawer component support RTL (Hebrew / Arabic websites).
 <br/>Usage: 
-Modify the 'rtl' prop to true
+Change the 'rtl' prop to true
 <br/><br/>
 ✦ Added to SideDrawer 3 different animations to choose from.
 <br/>Usage:
