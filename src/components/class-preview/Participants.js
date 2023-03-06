@@ -18,6 +18,15 @@ const Particpants = ({
         return participants.filter(participant => participant.isAdded == false)
     }
 
+    function getDropdownMenuText(){
+        if(getNonAddedParticipants().length === 0)
+            return "You Added All Clients"
+        if(showDropdownItems)
+            return "To"
+        else
+            return "Add Client"
+    }
+
     return (
         <div className="participants-container">
             <div className="add-participants">
@@ -27,7 +36,7 @@ const Particpants = ({
                     <div 
                         className={`dropdown-menu ${showDropdownItems ? "dropdown-menu-opened" : ""}`} 
                         onClick={() => setShowDropdownItems(showDropdownItems => !showDropdownItems)}>
-                        <p>{showDropdownItems ? "To" : "Add Client"}</p>
+                        <p>{getDropdownMenuText()}</p>
                         <i class="fa-solid fa-plus"></i>
                     </div>
 
@@ -45,7 +54,7 @@ const Particpants = ({
                 </div>
             </div>
 
-            <div class="participants">
+            <div className="participants">
                 {getAddedParticipants().map(participant =>
                     <div key={participant.id}>
                         <Participant

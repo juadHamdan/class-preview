@@ -11,13 +11,8 @@
     background: #555;
 }
 
-
-:root{
-    background-color: black;
-}
-
 body{
-
+    background-color: black;
 }
 
 .app-container{

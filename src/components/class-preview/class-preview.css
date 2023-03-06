@@ -1,22 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=calibri:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calibri');
+
+:root{
+    --container-side-padding: 30px;
+    --hr-height: 2px;
+    --hr-width: calc(100% + calc(var(--container-side-padding) * 2));
+
+    --container-mobile-side-padding: 10px;
+    --hr-mobile-width: calc(100% + calc(var(--container-mobile-side-padding) * 2))
+}
 
 .class-preview-container{
     background-color: white;
     position: relavite;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     height: 100%;
-    padding: 80px 30px 30px 30px;
+    padding: 0 var(--container-side-padding);
     font-family: "Calibri", sans-serif;
 }
 
 hr{
-    width: calc(100% + 60px);
-    margin-left: -30px;
-    height: 2px;
-    border: none;
+    width: calc(var(--hr-width) - calc(2 * var(--hr-height)));
+    margin-left: calc(-1 * var(--container-side-padding));
+    height: var(--hr-height);
     background-color: #f5f5f5;
+    border: var(--hr-height) solid #f5f5f5;
 }
 
 
@@ -29,6 +38,7 @@ hr{
 
 
 .header{
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,15 +85,17 @@ hr{
 
 .remark{
     text-align: left;
+    padding: 10px 2px;
 }
 .remark-header{
     font-weight: bold;
-    margin-bottom: 0;
-    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+    font-size: 1.07rem;
 }
 .remark-text{
-    padding-top: 0;
+    margin: 0;
     color: grey;
+    font-size: .9rem;
 }
 
 
@@ -127,13 +139,21 @@ hr{
 
 
 @media (max-width: 500px){
+    .header{
+        margin-top: 50px;
+    }
     .class-preview-container{
-        gap: 5px;
-        padding: 50px 10px 10px 10px;
+        gap: 0;
+        padding: 0 var(--container-mobile-side-padding);
     }
     .class-operations-buttons .btn{
-        height: 40px;
+        height: 30px;
         padding: 5px;
         margin: 0;
+    }
+
+    hr{
+        width: calc(var(--hr-mobile-width) - calc(2 * var(--hr-height)));
+        margin-left: calc(-1 * var(--container-mobile-side-padding));
     }
 }

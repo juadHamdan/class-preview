@@ -49,7 +49,7 @@ const ClassPreview = ({
                 <>
                     <div className="remark">
                         <p className="remark-header">You Should Know...</p>
-                        <p class="remark-text">{remark}</p>
+                        <p className="remark-text">{remark}</p>
                     </div>
                     <hr/>
                 </>

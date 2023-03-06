@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .participant .info{
@@ -26,8 +26,8 @@
 }
 
 .participant .profile-picture{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     object-fit: cover;
     border-radius: 50%;
 }

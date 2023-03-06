@@ -67,13 +67,28 @@
 }
 
 .participants-container .participants{
-    height: 100%;
+    height: 500px;
     overflow-y: scroll;
+    padding: 5px;
 }
 
-
-@media (max-height: 900px){
+@media (max-height: 1050px){
     .participants-container .participants{
-        height: 50%;
+        height: 400px;
+    }
+}
+@media (max-height: 950px){
+    .participants-container .participants{
+        height: 300px;
+    }
+}
+@media (max-height: 850px){
+    .participants-container .participants{
+        height: 200px;
+    }
+}
+@media (max-height: 800px){
+    .participants-container .participants{
+        height: 150px;
     }
 }

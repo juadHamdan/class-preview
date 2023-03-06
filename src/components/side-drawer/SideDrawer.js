@@ -19,7 +19,7 @@ const SideDrawer = ({
 
     const sideDrawerStyle = {
         right: rtl ? '' : '0',
-        left: rtl ? '0' :  ''
+        left: rtl ? '0' :  '',
     };
 
     return (
@@ -29,7 +29,10 @@ const SideDrawer = ({
             classNames={`side-drawer-${transition}${rtl && transition === 'slide' ? '-left' : '-right'}`}
             unmountOnExit
         >
-            <div className="side-drawer-bg" onClick={(e) => handleOutsideClick(e)}>
+            <div 
+                className="side-drawer-bg" 
+                onClick={(e) => handleOutsideClick(e)}
+            >
                 <div style={sideDrawerStyle} className="side-drawer">
                     <div className="component">
                         {children}

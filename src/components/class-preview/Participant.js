@@ -15,7 +15,7 @@ const Participant = ({
                 <p>{participant.firstName} {participant.lastName} </p>
             </div>
 
-            <div class="buttons">
+            <div className="buttons">
                 <button 
                     className={`btn ${participant.isChecked ? 'btn-checked' : 'btn-unchecked'}`}
                     onClick={onCheck}

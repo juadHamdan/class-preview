@@ -1,23 +1,25 @@
 .side-drawer-bg {
-    z-index: 1;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100%;
-    display: flex;
-    align-items: center;
+
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .side-drawer {
-    position: fixed;
+    position: absolute;
     text-align: center;
     height: 100%;
     width: max(25vw, 430px);
     cursor: default;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    align-items: center;
 }
 
 .side-drawer .component{
@@ -25,7 +27,7 @@
     height: 100%;
 }
 
-@media (max-width: 600px){
+@media (max-width: 500px){
     .side-drawer{
         width: 85%;
     }
