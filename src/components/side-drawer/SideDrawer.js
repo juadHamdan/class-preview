@@ -22,8 +22,6 @@ const SideDrawer = ({
         if(transition === 'slide')
             return rtl ? transitionClassName + '-left' : transitionClassName + '-right'
 
-        console.log(transitionClassName)
-
         return transitionClassName
     }
 
