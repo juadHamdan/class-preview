@@ -2,8 +2,8 @@
 * SideDrawer component support RTL (Hebrew / Arabic websites).
 <br/>Usage: 
 Modify the 'rtl' prop to true
- <br/>
- * Added to SideDrawer 3 different animations to choose from.
+<br/>
+* Added to SideDrawer 3 different animations to choose from.
 <br/>Usage:
 Modify the 'transition' prop to be on of: "slide", "fade" or "scale", try them out and choose for your liking.
 You can also control the duration of the animation selected by the prop: 'transitionTime'.
