@@ -74,7 +74,7 @@ Particpants.propTypes = {
     participants: PropTypes.array.isRequired,
     handleToggleAddParticipant: PropTypes.func.isRequired,
     handleToggleAddParticipant: PropTypes.func.isRequired,
-    handleParticipantContact: PropTypes.func
+    handleParticipantContact: PropTypes.func.isRequired
 };
 
 export default Particpants;
