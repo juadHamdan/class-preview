@@ -7,7 +7,7 @@ import ClassPreview from './components/class-preview/ClassPreview';
 
 function App() {
   const [showSideDrawer, setShowSideDrawer] = useState(false)
-  const { participants, toggleCheckParticipant, toggleAddParticipant} = HandleParticipants()
+  const {participants, toggleCheckParticipant, toggleAddParticipant, contactParticipant} = HandleParticipants()
 
   return (
     <div className="app-container">
@@ -29,6 +29,7 @@ function App() {
           participants={participants}
           handleToggleParticipantCheck={toggleCheckParticipant}
           handleToggleAddParticipant={toggleAddParticipant}
+          handleParticipantContact={contactParticipant}
           />
       </SideDrawer>
     </div>

@@ -11,7 +11,7 @@ const ClassPreview = ({
     remark,
     participants,
     handleToggleParticipantCheck,
-    handleParticipantContact = (id) => alert(`contact participant with id: ${id}`),
+    handleParticipantContact,
     handleToggleAddParticipant
 }) => {
 
@@ -85,9 +85,9 @@ ClassPreview.propTypes = {
     numOfActiveParticipants: PropTypes.number.isRequired,
     remark: PropTypes.string,
     participats: PropTypes.array,
-    handleToggleParticipantCheck: PropTypes.func,
-    handleParticipantContact: PropTypes.func,
-    handleToggleAddParticipant: PropTypes.func,
+    handleToggleParticipantCheck: PropTypes.func.isRequired,
+    handleParticipantContact: PropTypes.func.isRequired,
+    handleToggleAddParticipant: PropTypes.func.isRequired,
 };
 
 export default ClassPreview;

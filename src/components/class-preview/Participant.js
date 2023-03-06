@@ -1,12 +1,21 @@
 import "./participant.css";
 import PropTypes from "prop-types";
 
+const ParticipantStatusText = {
+    Checked: "Cheked",
+    NotChecked: "Check In"
+};
+
 const Participant = ({
     participant,
     onCheck,
     onDelete,
     onContact
 }) => {
+
+    function getParticipantStatusText(isChecked){
+        return isChecked ? ParticipantStatusText.Checked : ParticipantStatusText.NotChecked
+    }
 
     return (
         <div className="participant">
@@ -20,7 +29,7 @@ const Participant = ({
                     className={`btn ${participant.isChecked ? 'btn-checked' : 'btn-unchecked'}`}
                     onClick={onCheck}
                 >
-                    {participant.isChecked ? "Checked" : "Check In"}
+                    {getParticipantStatusText(participant.isChecked)}
                 </button>
 
                 <div>

@@ -2,7 +2,7 @@
 
 :root{
     --container-side-padding: 30px;
-    --hr-height: 2px;
+    --hr-height: 1px;
     --hr-width: calc(100% + calc(var(--container-side-padding) * 2));
 
     --container-mobile-side-padding: 10px;
