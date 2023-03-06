@@ -1,17 +1,16 @@
 .side-drawer-bg {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100%;
-
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .side-drawer {
-    position: absolute;
+    position: fixed;
     text-align: center;
     height: 100%;
     width: max(25vw, 430px);
@@ -96,5 +95,29 @@
 .side-drawer-slide-right-exit-active {
     opacity: 0;
     transform: translateX(-100%);
+    transition: all 300ms ease-in-out;
+}
+
+/* ----------------------- */
+
+.side-drawer-scale-enter {
+    opacity: 0;
+    scale: 2;
+}
+
+.side-drawer-scale-enter-active {
+    scale: 1;
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.side-drawer-scale-exit {
+    scale: 1;
+    opacity: 1;
+}
+
+.side-drawer-scale-exit-active {
+    scale: 2;
+    opacity: 0;
     transition: all 300ms ease-in-out;
 }

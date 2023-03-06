@@ -7,7 +7,7 @@ const SideDrawer = ({
     show,
     onClose,
     rtl = false,
-    transition = "slide",
+    transition = "scale",
     transitionTime = 300
 }) => {
 
@@ -15,6 +15,16 @@ const SideDrawer = ({
         if(e.target.className.includes("side-drawer-bg")){
             onClose()
         }
+    }
+
+    function getTransitionClassName(){
+        let transitionClassName = `side-drawer-${transition}`
+        if(transition === 'slide')
+            return rtl ? transitionClassName + '-left' : transitionClassName + '-right'
+
+        console.log(transitionClassName)
+
+        return transitionClassName
     }
 
     const sideDrawerStyle = {
@@ -26,7 +36,7 @@ const SideDrawer = ({
         <CSSTransition
             in={show}
             timeout={transitionTime}
-            classNames={`side-drawer-${transition}${rtl && transition === 'slide' ? '-left' : '-right'}`}
+            classNames={getTransitionClassName()}
             unmountOnExit
         >
             <div 
